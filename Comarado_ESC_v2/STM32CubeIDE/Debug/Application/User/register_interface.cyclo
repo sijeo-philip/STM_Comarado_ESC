@@ -1,0 +1,7 @@
+D:/Comrado/ESC_BMS_Project/ALL DOCS/ALL DOCS/ESC/STM_B_G431_ESC/Comarado_ESC_v2/Src/register_interface.c:32:9:RI_SetRegisterGlobal	17
+D:/Comrado/ESC_BMS_Project/ALL DOCS/ALL DOCS/ESC/STM_B_G431_ESC/Comarado_ESC_v2/Src/register_interface.c:166:9:RI_SetRegisterMotor1	98
+D:/Comrado/ESC_BMS_Project/ALL DOCS/ALL DOCS/ESC/STM_B_G431_ESC/Comarado_ESC_v2/Src/register_interface.c:645:9:RI_GetRegisterGlobal	20
+D:/Comrado/ESC_BMS_Project/ALL DOCS/ALL DOCS/ESC/STM_B_G431_ESC/Comarado_ESC_v2/Src/register_interface.c:790:11:RI_GetRegisterMotor1	110
+D:/Comrado/ESC_BMS_Project/ALL DOCS/ALL DOCS/ESC/STM_B_G431_ESC/Comarado_ESC_v2/Src/register_interface.c:1412:9:RI_MovString	4
+D:/Comrado/ESC_BMS_Project/ALL DOCS/ALL DOCS/ESC/STM_B_G431_ESC/Comarado_ESC_v2/Src/register_interface.c:1438:9:RI_GetIDSize	2
+D:/Comrado/ESC_BMS_Project/ALL DOCS/ALL DOCS/ESC/STM_B_G431_ESC/Comarado_ESC_v2/Src/register_interface.c:1473:16:RI_GetPtrReg	21

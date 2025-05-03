@@ -1,0 +1,5 @@
+D:/Comrado/ESC_BMS_Project/ALL DOCS/ALL DOCS/ESC/STM_B_G431_ESC/Comarado_ESC_v2/MCSDK_v6.3.2-Full/MotorControl/MCSDK/MCLib/Any/Src/flux_weakening_ctrl.c:58:13:FW_Init	0	static
+D:/Comrado/ESC_BMS_Project/ALL DOCS/ALL DOCS/ESC/STM_B_G431_ESC/Comarado_ESC_v2/MCSDK_v6.3.2-Full/MotorControl/MCSDK/MCLib/Any/Src/flux_weakening_ctrl.c:81:13:FW_Clear	8	static
+D:/Comrado/ESC_BMS_Project/ALL DOCS/ALL DOCS/ESC/STM_B_G431_ESC/Comarado_ESC_v2/MCSDK_v6.3.2-Full/MotorControl/MCSDK/MCLib/Any/Src/flux_weakening_ctrl.c:112:13:FW_CalcCurrRef	40	static,ignoring_inline_asm
+D:/Comrado/ESC_BMS_Project/ALL DOCS/ALL DOCS/ESC/STM_B_G431_ESC/Comarado_ESC_v2/MCSDK_v6.3.2-Full/MotorControl/MCSDK/MCLib/Any/Src/flux_weakening_ctrl.c:208:13:FW_DataProcess	8	static
+D:/Comrado/ESC_BMS_Project/ALL DOCS/ALL DOCS/ESC/STM_B_G431_ESC/Comarado_ESC_v2/MCSDK_v6.3.2-Full/MotorControl/MCSDK/MCLib/Any/Src/flux_weakening_ctrl.c:255:16:FW_GetAvVAmplitude	0	static

@@ -1,0 +1,7 @@
+D:/Comrado/ESC_BMS_Project/ALL DOCS/ALL DOCS/ESC/STM_B_G431_ESC/Comarado_ESC_v2/Src/mc_tasks_foc.c:485:13:FOC_Clear	16	static
+D:/Comrado/ESC_BMS_Project/ALL DOCS/ALL DOCS/ESC/STM_B_G431_ESC/Comarado_ESC_v2/Src/mc_tasks_foc.c:81:13:FOC_Init	40	static
+D:/Comrado/ESC_BMS_Project/ALL DOCS/ALL DOCS/ESC/STM_B_G431_ESC/Comarado_ESC_v2/Src/mc_tasks_foc.c:161:6:TSK_MF_StopProcessing	8	static
+D:/Comrado/ESC_BMS_Project/ALL DOCS/ALL DOCS/ESC/STM_B_G431_ESC/Comarado_ESC_v2/Src/mc_tasks_foc.c:530:13:FOC_InitAdditionalMethods	0	static
+D:/Comrado/ESC_BMS_Project/ALL DOCS/ALL DOCS/ESC/STM_B_G431_ESC/Comarado_ESC_v2/Src/mc_tasks_foc.c:553:13:FOC_CalcCurrRef	32	static,ignoring_inline_asm
+D:/Comrado/ESC_BMS_Project/ALL DOCS/ALL DOCS/ESC/STM_B_G431_ESC/Comarado_ESC_v2/Src/mc_tasks_foc.c:179:13:TSK_MediumFrequencyTaskM1	32	static
+D:/Comrado/ESC_BMS_Project/ALL DOCS/ALL DOCS/ESC/STM_B_G431_ESC/Comarado_ESC_v2/Src/mc_tasks_foc.c:617:16:FOC_HighFrequencyTask	64	static
