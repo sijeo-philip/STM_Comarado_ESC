@@ -1183,7 +1183,7 @@
       "driveManagement_0": {
         "currentReg": {
           "controlMode": "speed",
-          "autoPI": true,
+          "autoPI": false,
           "KpKi": {
             "P": "Number.NaN",
             "I": "Number.NaN"
@@ -1194,7 +1194,7 @@
           "MTPATarget": "Number.NaN"
         },
         "speedReg": {
-          "executionRate": 1,
+          "executionRate": 0.5,
           "targetSpeed": "Number.NaN",
           "commutationTime": "Number.NaN",
           "KpKi": {
@@ -1213,12 +1213,12 @@
           "target": "Number.NaN",
           "KpKi": {
             "P": {
-              "num": "Number.NaN",
-              "den": "Number.NaN"
+              "num": 7500,
+              "den": 16384
             },
             "I": {
-              "num": "Number.NaN",
-              "den": "Number.NaN"
+              "num": 1500,
+              "den": 16384
             }
           }
         },
@@ -1226,12 +1226,12 @@
           "target": "Number.NaN",
           "KpKi": {
             "P": {
-              "num": "Number.NaN",
-              "den": "Number.NaN"
+              "num": 7500,
+              "den": 16384
             },
             "I": {
-              "num": "Number.NaN",
-              "den": "Number.NaN"
+              "num": 1500,
+              "den": 16384
             }
           }
         },
@@ -1293,8 +1293,8 @@
             "gainMode": "",
             "sensingType": "",
             "gain": "Number.NaN",
-            "tNoise": 1000,
-            "tRise": 1000,
+            "tNoise": 900,
+            "tRise": 900,
             "internalGainFactor": "Number.NaN",
             "maxModulation": "Number.NaN",
             "samplingTime": 2.5,

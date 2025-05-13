@@ -6,7 +6,7 @@ D:/Comrado/ESC_BMS_Project/ALL DOCS/ALL DOCS/ESC/STM_B_G431_ESC/Comarado_ESC_v2/
 D:/Comrado/ESC_BMS_Project/ALL DOCS/ALL DOCS/ESC/STM_B_G431_ESC/Comarado_ESC_v2/Src/mc_tasks.c:314:16:TSK_HighFrequencyTask	8	static
 D:/Comrado/ESC_BMS_Project/ALL DOCS/ALL DOCS/ESC/STM_B_G431_ESC/Comarado_ESC_v2/Src/mc_tasks.c:372:13:TSK_SafetyTask_PWMOFF	24	static
 D:/Comrado/ESC_BMS_Project/ALL DOCS/ALL DOCS/ESC/STM_B_G431_ESC/Comarado_ESC_v2/Src/mc_tasks.c:347:13:TSK_SafetyTask	8	static
-D:/Comrado/ESC_BMS_Project/ALL DOCS/ALL DOCS/ESC/STM_B_G431_ESC/Comarado_ESC_v2/Src/mc_tasks.c:162:13:MC_RunMotorControlTasks	16	static
+D:/Comrado/ESC_BMS_Project/ALL DOCS/ALL DOCS/ESC/STM_B_G431_ESC/Comarado_ESC_v2/Src/mc_tasks.c:162:13:MC_RunMotorControlTasks	24	static
 D:/Comrado/ESC_BMS_Project/ALL DOCS/ALL DOCS/ESC/STM_B_G431_ESC/Comarado_ESC_v2/Src/mc_tasks.c:437:13:TSK_HardwareFaultTask	8	static
 D:/Comrado/ESC_BMS_Project/ALL DOCS/ALL DOCS/ESC/STM_B_G431_ESC/Comarado_ESC_v2/Src/mc_tasks.c:450:13:UI_HandleStartStopButton_cb	8	static
 D:/Comrado/ESC_BMS_Project/ALL DOCS/ALL DOCS/ESC/STM_B_G431_ESC/Comarado_ESC_v2/Src/mc_tasks.c:468:13:mc_lock_pins	88	static

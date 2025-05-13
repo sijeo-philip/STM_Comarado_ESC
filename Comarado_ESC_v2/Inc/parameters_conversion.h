@@ -195,8 +195,8 @@
 
 #define LPF_FILT_CONST                      ((int16_t)(32767 * 0.5))
 
-/* MMI Table Motor 1 MAX_MODULATION_96_PER_CENT */
-#define MAX_MODULE                          (uint16_t)((96* 32767)/100)
+/* MMI Table Motor 1 MAX_MODULATION_97_PER_CENT */
+#define MAX_MODULE                          (uint16_t)((97* 32767)/100)
 
 #define SAMPLING_CYCLE_CORRECTION           0.5 /* Add half cycle required by STM32G431CBUx ADC */
 #define LL_ADC_SAMPLINGTIME_1CYCLES_5       LL_ADC_SAMPLINGTIME_1CYCLE_5

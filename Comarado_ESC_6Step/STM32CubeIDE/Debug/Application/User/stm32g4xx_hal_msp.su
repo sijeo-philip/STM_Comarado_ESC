@@ -1,0 +1,8 @@
+D:/Comrado/ESC_BMS_Project/ALL DOCS/ALL DOCS/ESC/STM_B_G431_ESC/Comarado_ESC_6Step/Src/stm32g4xx_hal_msp.c:68:6:HAL_MspInit	16	static
+D:/Comrado/ESC_BMS_Project/ALL DOCS/ALL DOCS/ESC/STM_B_G431_ESC/Comarado_ESC_6Step/Src/stm32g4xx_hal_msp.c:98:6:HAL_ADC_MspInit	128	static
+D:/Comrado/ESC_BMS_Project/ALL DOCS/ALL DOCS/ESC/STM_B_G431_ESC/Comarado_ESC_6Step/Src/stm32g4xx_hal_msp.c:193:6:HAL_ADC_MspDeInit	8	static
+D:/Comrado/ESC_BMS_Project/ALL DOCS/ALL DOCS/ESC/STM_B_G431_ESC/Comarado_ESC_6Step/Src/stm32g4xx_hal_msp.c:269:6:HAL_TIM_Base_MspInit	8	static
+D:/Comrado/ESC_BMS_Project/ALL DOCS/ALL DOCS/ESC/STM_B_G431_ESC/Comarado_ESC_6Step/Src/stm32g4xx_hal_msp.c:296:6:HAL_TIM_MspPostInit	56	static
+D:/Comrado/ESC_BMS_Project/ALL DOCS/ALL DOCS/ESC/STM_B_G431_ESC/Comarado_ESC_6Step/Src/stm32g4xx_hal_msp.c:349:6:HAL_TIM_Base_MspDeInit	8	static
+D:/Comrado/ESC_BMS_Project/ALL DOCS/ALL DOCS/ESC/STM_B_G431_ESC/Comarado_ESC_6Step/Src/stm32g4xx_hal_msp.c:389:6:HAL_UART_MspInit	112	static
+D:/Comrado/ESC_BMS_Project/ALL DOCS/ALL DOCS/ESC/STM_B_G431_ESC/Comarado_ESC_6Step/Src/stm32g4xx_hal_msp.c:470:6:HAL_UART_MspDeInit	8	static
