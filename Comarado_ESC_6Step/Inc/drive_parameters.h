@@ -43,7 +43,7 @@
 #define BEMF_THRESHOLD_LOW_PERC  	       1	/*!< Percentage of Bus for zero crossing detection with on-sensing and high side modulation */
 #define BEMF_ADC_TRIG_TIME_DPP             ((uint16_t)921) /*!< 1/1024 of PWM period elapsed */
 #define BEMF_ADC_TRIG_TIME_ON_DPP          ((uint16_t)256) /*!< 1/1024 of PWM period  elapsed */
-#define BEMF_PWM_ON_ENABLE_THRES_DPP       ((uint16_t)716) /*!< 1/1024 of PWM period   elapsed */
+#define BEMF_PWM_ON_ENABLE_THRES_DPP       ((uint16_t)1023) /*!< 1/1024 of PWM period   elapsed */
 #define BEMF_PWM_ON_ENABLE_HYSTERESIS_DPP  ((uint16_t)51) /*!< 1/1024 of PWM period    elapsed */
 #define ZCD_RISING_TO_COMM                 ((uint16_t)30) /*!< Zero Crossing detection to commutation delay in degrees */
 #define ZCD_FALLING_TO_COMM                ((uint16_t)30) /*!< Zero Crossing detection to commutation delay in degrees */
@@ -68,19 +68,19 @@
 #define SW_DEADTIME_NS                     750 /*!< Dead-time to be inserted by FW, only if low side signals are enabled */
 
 /* High frequency task regulation loop */
-#define REGULATION_EXECUTION_RATE          2 /*!< Execution rate in number of PWM  cycles */
+#define REGULATION_EXECUTION_RATE          1 /*!< Execution rate in number of PWM  cycles */
 
 /* Speed control loop */
 #define SPEED_LOOP_FREQUENCY_HZ            (uint16_t)1000 /*!<Execution rate of speed regulation loop (Hz) */
-#define PID_SPEED_KP_DEFAULT          3129/(SPEED_UNIT/10) /* Workbench compute the gain for 01Hz unit*/
-#define PID_SPEED_KI_DEFAULT          676/(SPEED_UNIT/10) /* Workbench compute the gain for 01Hz unit*/
+#define PID_SPEED_KP_DEFAULT          6000/(SPEED_UNIT/10) /* Workbench compute the gain for 01Hz unit*/
+#define PID_SPEED_KI_DEFAULT          16000/(SPEED_UNIT/10) /* Workbench compute the gain for 01Hz unit*/
 #define PID_SPEED_KD_DEFAULT          0/(SPEED_UNIT/10) /* Workbench compute the gain for 01Hz unit*/
 
 /* Speed PID parameter dividers */
-#define SP_KPDIV                           2048
+#define SP_KPDIV                           512
 #define SP_KIDIV                           16384
 #define SP_KDDIV                           16
-#define SP_KPDIV_LOG                       LOG2((2048))
+#define SP_KPDIV_LOG                       LOG2((512))
 #define SP_KIDIV_LOG                       LOG2((16384))
 #define SP_KDDIV_LOG                       LOG2((16))
 
@@ -120,27 +120,27 @@
 /* Phase 1 */
 #define PHASE1_DURATION                    500 /* milliseconds */
 #define PHASE1_FINAL_SPEED_UNIT            (0*SPEED_UNIT/U_RPM)
-#define PHASE1_VOLTAGE_RMS                 1
+#define PHASE1_VOLTAGE_RMS                 0.99
 
 /* Phase 2 */
 #define PHASE2_DURATION                    1000 /* milliseconds */
 #define PHASE2_FINAL_SPEED_UNIT            (3000*SPEED_UNIT/U_RPM)
-#define PHASE2_VOLTAGE_RMS                 7.79
+#define PHASE2_VOLTAGE_RMS                 7.72
 
 /* Phase 3 */
-#define PHASE3_DURATION                    500 /* milliseconds */
+#define PHASE3_DURATION                    5000 /* milliseconds */
 #define PHASE3_FINAL_SPEED_UNIT            (3000*SPEED_UNIT/U_RPM)
-#define PHASE3_VOLTAGE_RMS                 7.79
+#define PHASE3_VOLTAGE_RMS                 7.72
 
 /* Phase 4 */
 #define PHASE4_DURATION                    0 /* milliseconds */
 #define PHASE4_FINAL_SPEED_UNIT            (0*SPEED_UNIT/U_RPM)
-#define PHASE4_VOLTAGE_RMS                 1
+#define PHASE4_VOLTAGE_RMS                 0.99
 
 /* Phase 5 */
 #define PHASE5_DURATION                    0 /* milliseconds */
 #define PHASE5_FINAL_SPEED_UNIT            (0*SPEED_UNIT/U_RPM)
-#define PHASE5_VOLTAGE_RMS                 1
+#define PHASE5_VOLTAGE_RMS                 0.99
 #define ENABLE_SL_ALGO_FROM_PHASE          3
 
 /* Sensor-less rev-up sequence */

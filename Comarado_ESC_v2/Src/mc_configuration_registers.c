@@ -44,8 +44,8 @@ static const ApplicationConfig_reg_t M1_ApplicationConfig_reg =
 {
   .maxMechanicalSpeed = 19500,
   .maxReadableCurrent = M1_MAX_READABLE_CURRENT,
-  .nominalCurrent     = 20,
-  .nominalVoltage     = 21,
+  .nominalCurrent     = 25,
+  .nominalVoltage     = 20,
   .driveType          = DRIVE_TYPE_M1,
 };
 
@@ -57,7 +57,7 @@ static const MotorConfig_reg_t M1_MotorConfig_reg =
   .rs         = 0.13,
   .ls         = 0.000012*1.000,
   .ld         = 0.000012,
-  .maxCurrent = 20,
+  .maxCurrent = 25,
   .name = "F2004_KV1700"
 };
 

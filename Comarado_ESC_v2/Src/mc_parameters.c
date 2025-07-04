@@ -145,25 +145,25 @@ const R3_2_Params_t R3_2_ParamsM1 =
   .OPAMPParams           = &R3_3_OPAMPParamsM1,
 
 /* Internal COMP settings ----------------------------------------------------*/
-  .CompOCPASelection     = COMP1,
-  .CompOCPAInvInput_MODE = INT_MODE,
-  .CompOCPBSelection     = COMP2,
-  .CompOCPBInvInput_MODE = INT_MODE,
-  .CompOCPCSelection     = COMP4,
-  .CompOCPCInvInput_MODE = INT_MODE,
-  .DAC_OCP_ASelection    = DAC3,
-  .DAC_OCP_BSelection    = DAC3,
-  .DAC_OCP_CSelection    = DAC3,
-  .DAC_Channel_OCPA      = LL_DAC_CHANNEL_1,
-  .DAC_Channel_OCPB      = LL_DAC_CHANNEL_2,
-  .DAC_Channel_OCPC      = LL_DAC_CHANNEL_2,
+  .CompOCPASelection     = MC_NULL,
+  .CompOCPAInvInput_MODE = NONE,
+  .CompOCPBSelection     = MC_NULL,
+  .CompOCPBInvInput_MODE = NONE,
+  .CompOCPCSelection     = MC_NULL,
+  .CompOCPCInvInput_MODE = NONE,
+  .DAC_OCP_ASelection    = MC_NULL,
+  .DAC_OCP_BSelection    = MC_NULL,
+  .DAC_OCP_CSelection    = MC_NULL,
+  .DAC_Channel_OCPA      = (uint32_t)0,
+  .DAC_Channel_OCPB      = (uint32_t)0,
+  .DAC_Channel_OCPC      = (uint32_t)0,
   .CompOVPSelection      = MC_NULL,
   .CompOVPInvInput_MODE  = NONE,
   .DAC_OVP_Selection     = MC_NULL,
   .DAC_Channel_OVP       = (uint32_t)0,
 
 /* DAC settings --------------------------------------------------------------*/
-  .DAC_OCP_Threshold     = 4083,
+  .DAC_OCP_Threshold     = 0,
   .DAC_OVP_Threshold     = 23830,
 
 };

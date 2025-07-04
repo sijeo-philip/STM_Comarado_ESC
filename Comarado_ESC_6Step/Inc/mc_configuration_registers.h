@@ -124,7 +124,7 @@ typedef struct
 #define PRIM_SENSOR_M1            0
 #define AUX_SENSOR_M1             ENO_SENSOR
 #define TOPOLOGY_M1               0
-#define FOC_RATE_M1               2
+#define FOC_RATE_M1               1
 #define PWM_FREQ_M1               50000
 
 extern const char_t FIRMWARE_NAME[]; //cstat !MISRAC2012-Rule-18.8 !MISRAC2012-Rule-8.11

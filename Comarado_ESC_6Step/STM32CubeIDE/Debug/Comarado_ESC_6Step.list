@@ -27,27 +27,27 @@ Idx Name          Size      VMA       LMA       File off  Algn
                   ALLOC
  11 .ARM.attributes 00000030  00000000  00000000  0000a488  2**0
                   CONTENTS, READONLY
- 12 .debug_line   0003dc29  00000000  00000000  0000a4b8  2**0
+ 12 .debug_line   0003dc26  00000000  00000000  0000a4b8  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 13 .debug_line_str 00000095  00000000  00000000  000480e1  2**0
+ 13 .debug_line_str 00000095  00000000  00000000  000480de  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 14 .debug_info   0003e95a  00000000  00000000  00048176  2**0
+ 14 .debug_info   0003e95b  00000000  00000000  00048173  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 15 .debug_abbrev 00007bb0  00000000  00000000  00086ad0  2**0
+ 15 .debug_abbrev 00007bb0  00000000  00000000  00086ace  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
  16 .debug_aranges 00001ac8  00000000  00000000  0008e680  2**3
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 17 .debug_str    000ff485  00000000  00000000  00090148  2**0
+ 17 .debug_str    000ff490  00000000  00000000  00090148  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 18 .debug_rnglists 00002fb5  00000000  00000000  0018f5cd  2**0
+ 18 .debug_rnglists 00002fb5  00000000  00000000  0018f5d8  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 19 .debug_loclists 0001a4c6  00000000  00000000  00192582  2**0
+ 19 .debug_loclists 0001a4c6  00000000  00000000  0019258d  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 20 .debug_macro  0002aac9  00000000  00000000  001aca48  2**0
+ 20 .debug_macro  0002aac9  00000000  00000000  001aca53  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 21 .comment      00000043  00000000  00000000  001d7511  2**0
+ 21 .comment      00000043  00000000  00000000  001d751c  2**0
                   CONTENTS, READONLY
- 22 .debug_frame  00004704  00000000  00000000  001d7554  2**2
+ 22 .debug_frame  00004704  00000000  00000000  001d7560  2**2
                   CONTENTS, READONLY, DEBUGGING, OCTETS
 
 Disassembly of section .text:
@@ -2612,20 +2612,20 @@ void Error_Handler(void)
   if (HAL_ADCEx_InjectedConfigChannel(&hadc2, &sConfigInjected) != HAL_OK)
  8001532:	4658      	mov	r0, fp
  8001534:	a91b      	add	r1, sp, #108	@ 0x6c
-  sConfigInjected.InjectedOffset = 0;
- 8001536:	e9cd 521f 	strd	r5, r2, [sp, #124]	@ 0x7c
-  sConfigInjected.InjectedSamplingTime = ADC_SAMPLETIME_47CYCLES_5;
- 800153a:	951d      	str	r5, [sp, #116]	@ 0x74
+  sConfigInjected.InjectedNbrOfConversion = 1;
+ 8001536:	9423      	str	r4, [sp, #140]	@ 0x8c
   sConfigInjected.InjectedRank = ADC_INJECTED_RANK_1;
- 800153c:	e9cd 691b 	strd	r6, r9, [sp, #108]	@ 0x6c
+ 8001538:	e9cd 691b 	strd	r6, r9, [sp, #108]	@ 0x6c
+  sConfigInjected.InjectedOffset = 0;
+ 800153c:	e9cd 521f 	strd	r5, r2, [sp, #124]	@ 0x7c
   sConfigInjected.InjectedSingleDiff = ADC_SINGLE_ENDED;
  8001540:	971e      	str	r7, [sp, #120]	@ 0x78
   sConfigInjected.ExternalTrigInjecConv = ADC_EXTERNALTRIGINJEC_T1_TRGO;
  8001542:	f8cd 8094 	str.w	r8, [sp, #148]	@ 0x94
   sConfigInjected.ExternalTrigInjecConvEdge = ADC_EXTERNALTRIGINJECCONV_EDGE_FALLING;
  8001546:	9326      	str	r3, [sp, #152]	@ 0x98
-  sConfigInjected.InjectedNbrOfConversion = 1;
- 8001548:	9423      	str	r4, [sp, #140]	@ 0x8c
+  sConfigInjected.InjectedSamplingTime = ADC_SAMPLETIME_47CYCLES_5;
+ 8001548:	951d      	str	r5, [sp, #116]	@ 0x74
   sConfigInjected.InjectedDiscontinuousConvMode = DISABLE;
  800154a:	f8ad 2090 	strh.w	r2, [sp, #144]	@ 0x90
   sConfigInjected.QueueInjectedContext = DISABLE;
@@ -2634,7 +2634,7 @@ void Error_Handler(void)
  8001552:	f88d 209c 	strb.w	r2, [sp, #156]	@ 0x9c
   if (HAL_ADCEx_InjectedConfigChannel(&hadc2, &sConfigInjected) != HAL_OK)
  8001556:	f003 f93d 	bl	80047d4 <HAL_ADCEx_InjectedConfigChannel>
- 800155a:	4605      	mov	r5, r0
+ 800155a:	4604      	mov	r4, r0
  800155c:	b108      	cbz	r0, 8001562 <main+0x28a>
  800155e:	b672      	cpsid	i
   while (1)
@@ -2664,13 +2664,11 @@ void Error_Handler(void)
   htim1.Init.Period = (PWM_PERIOD_CYCLES);
  800158e:	f640 5348 	movw	r3, #3400	@ 0xd48
   htim1.Init.CounterMode = TIM_COUNTERMODE_UP;
- 8001592:	e9c0 5501 	strd	r5, r5, [r0, #4]
+ 8001592:	e9c0 4401 	strd	r4, r4, [r0, #4]
   htim1.Init.RepetitionCounter = (REP_COUNTER);
- 8001596:	6144      	str	r4, [r0, #20]
-  htim1.Init.ClockDivision = TIM_CLOCKDIVISION_DIV1;
- 8001598:	6105      	str	r5, [r0, #16]
+ 8001596:	e9c0 4404 	strd	r4, r4, [r0, #16]
   htim1.Init.AutoReloadPreload = TIM_AUTORELOAD_PRELOAD_DISABLE;
- 800159a:	6185      	str	r5, [r0, #24]
+ 800159a:	6184      	str	r4, [r0, #24]
   htim1.Init.Period = (PWM_PERIOD_CYCLES);
  800159c:	60c3      	str	r3, [r0, #12]
   if (HAL_TIM_Base_Init(&htim1) != HAL_OK)

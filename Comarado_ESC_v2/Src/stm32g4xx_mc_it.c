@@ -127,7 +127,7 @@ void TIMx_BRK_M1_IRQHandler(void)
   else
   {
     LL_TIM_ClearFlag_BRK(TIM1);
-    PWMC_OCP_Handler(&PWM_Handle_M1._Super);
+    PWMC_OVP_Handler(&PWM_Handle_M1._Super, TIM1);
   }
 
   if (0U == LL_TIM_IsActiveFlag_BRK2(TIM1))

@@ -1,7 +1,10 @@
 {
-  "algorithm": "sixStep",
   "description": "Motor Control for Drones using 6 Step control",
   "checkList": {},
+  "version": 12,
+  "workBenchVersion": "6.3.2",
+  "workBenchVersionFileCreation": "6.3.2",
+  "algorithm": "sixStep",
   "hardwares": {
     "type": "INVERTER",
     "control": {
@@ -1025,9 +1028,6 @@
       ]
     }
   },
-  "version": 10,
-  "workBenchVersion": "6.3.2",
-  "workBenchVersionFileCreation": "6.3.2",
   "details": {
     "steps": {
       "motor_0": {
@@ -1039,7 +1039,7 @@
         "ls": 0.012,
         "mmsLd_lq_ratio": "Number.NaN",
         "maxCurrent": 15,
-        "maxDCVoltage": 17,
+        "maxDCVoltage": 16.8,
         "BEmfConstant": 0.45,
         "inertia": "Number.NaN",
         "friction": "Number.NaN",
@@ -1067,6 +1067,122 @@
           "changeStateAfter": "Number.NaN",
           "capChargingDelay": "Number.NaN",
           "voltageThreshold": "Number.NaN"
+        }
+      },
+      "driveManagement_0": {
+        "executionRate": 1,
+        "speedReg": {
+          "executionRate": "Number.NaN",
+          "targetSpeed": "Number.NaN",
+          "commutationTime": "Number.NaN",
+          "KpKi": {
+            "P": {
+              "num": 6000,
+              "den": 512
+            },
+            "I": {
+              "num": 16000,
+              "den": 16384
+            }
+          },
+          "autoPI": false
+        },
+        "demag": {
+          "runTime": "Number.NaN",
+          "minTime": "Number.NaN",
+          "speedThresh": "Number.NaN",
+          "startUpTime": "Number.NaN"
+        },
+        "debugSettings": {
+          "openLoop": {
+            "enabled": false
+          }
+        }
+      },
+      "speedSensing_0": {
+        "mainSensorParams": {
+          "speedSensorMode": "",
+          "maxAllowedErrors": "Number.NaN",
+          "sensorParams": {
+            "_tag": "ADC",
+            "speedFIFODepth": "Number.NaN",
+            "PWMOnSensing": false,
+            "bemfPWMOnEnableThresDpp": "Number.NaN",
+            "bemfPWMOnEnableHysterDpp": "Number.NaN",
+            "bemfDivider": "Number.NaN",
+            "samplingTime": "Number.NaN",
+            "thresholdHighSide": "Number.NaN",
+            "thresholdLowSide": "Number.NaN",
+            "samplingPointOff": "Number.NaN",
+            "thresholdPwmOn": "Number.NaN",
+            "samplingPointOn": "Number.NaN",
+            "fallingZCD": "Number.NaN",
+            "risingZCD": "Number.NaN",
+            "adcWDFilter": "Number.NaN",
+            "delayComputation": "Number.NaN",
+            "timer": ""
+          }
+        },
+        "auxSensorParams": {
+          "enableAuxSensing": false,
+          "speedSensorMode": "",
+          "maxAllowedErrors": "Number.NaN",
+          "sensorParams": {
+            "_tag": "hall",
+            "speedFIFODepth": "Number.NaN",
+            "inputFilterDuration": "Number.NaN",
+            "useMTPA": false
+          }
+        },
+        "startupParams": {
+          "startupProfile": {
+            "initialElectricalAngle": "Number.NaN",
+            "pts": [
+              {
+                "duration": "Number.NaN",
+                "speedTarget": "Number.NaN",
+                "currVoltTarget": "Number.NaN"
+              },
+              {
+                "duration": "Number.NaN",
+                "speedTarget": "Number.NaN",
+                "currVoltTarget": "Number.NaN"
+              },
+              {
+                "duration": 500,
+                "speedTarget": "Number.NaN",
+                "currVoltTarget": "Number.NaN"
+              },
+              {
+                "duration": "Number.NaN",
+                "speedTarget": "Number.NaN",
+                "currVoltTarget": "Number.NaN"
+              },
+              {
+                "duration": 5000,
+                "speedTarget": 3000,
+                "currVoltTarget": "Number.NaN"
+              },
+              {
+                "duration": "Number.NaN",
+                "speedTarget": "Number.NaN",
+                "currVoltTarget": "Number.NaN"
+              },
+              {
+                "duration": "Number.NaN",
+                "speedTarget": "Number.NaN",
+                "currVoltTarget": "Number.NaN"
+              }
+            ],
+            "sensorlessStartingPhase": "Number.NaN",
+            "isDrivingModeVoltage": true
+          },
+          "startupExitCond": {
+            "startUpSpeedThresh": "Number.NaN",
+            "consecutiveCorrectMeasures": "Number.NaN",
+            "speedBandToleranceLowerLimit": "Number.NaN",
+            "speedBandToleranceUpperLimit": "Number.NaN"
+          }
         }
       }
     }

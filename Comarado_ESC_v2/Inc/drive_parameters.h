@@ -79,23 +79,23 @@
 #define ISR_FREQUENCY_HZ                    (PWM_FREQUENCY/REGULATION_EXECUTION_RATE) /*!< @brief FOC execution rate in Hz */
 
 /* Gains values for torque and flux control loops */
-#define PID_TORQUE_KP_DEFAULT               7500
-#define PID_TORQUE_KI_DEFAULT               1500
+#define PID_TORQUE_KP_DEFAULT               3551
+#define PID_TORQUE_KI_DEFAULT               2564
 #define PID_TORQUE_KD_DEFAULT               100
-#define PID_FLUX_KP_DEFAULT                 7500
-#define PID_FLUX_KI_DEFAULT                 1500
+#define PID_FLUX_KP_DEFAULT                 3551
+#define PID_FLUX_KI_DEFAULT                 2564
 #define PID_FLUX_KD_DEFAULT                 100
 
 /* Torque/Flux control loop gains dividers*/
-#define TF_KPDIV                            16384
+#define TF_KPDIV                            8192
 #define TF_KIDIV                            16384
 #define TF_KDDIV                            8192
-#define TF_KPDIV_LOG                        LOG2((16384))
+#define TF_KPDIV_LOG                        LOG2((8192))
 #define TF_KIDIV_LOG                        LOG2((16384))
 #define TF_KDDIV_LOG                        LOG2((8192))
 #define TFDIFFERENTIAL_TERM_ENABLING        DISABLE
 
-#define PID_SPEED_KP_DEFAULT                3400/(SPEED_UNIT/10) /* Workbench compute the gain for 01Hz unit*/
+#define PID_SPEED_KP_DEFAULT                6000/(SPEED_UNIT/10) /* Workbench compute the gain for 01Hz unit*/
 #define PID_SPEED_KI_DEFAULT                2000/(SPEED_UNIT/10) /* Workbench compute the gain for 01Hz unit*/
 #define PID_SPEED_KD_DEFAULT                0/(SPEED_UNIT/10) /* Workbench compute the gain for 01Hz unit*/
 
@@ -103,10 +103,10 @@
 #define SPEED_LOOP_FREQUENCY_HZ             (uint16_t)2000 /*!<Execution rate of speed regulation loop (Hz) */
 
 /* Speed PID parameter dividers */
-#define SP_KPDIV                            1024
+#define SP_KPDIV                            512
 #define SP_KIDIV                            2048
 #define SP_KDDIV                            16
-#define SP_KPDIV_LOG                        LOG2((1024))
+#define SP_KPDIV_LOG                        LOG2((512))
 #define SP_KIDIV_LOG                        LOG2((2048))
 #define SP_KDDIV_LOG                        LOG2((16))
 
@@ -115,7 +115,7 @@
 /* USER CODE END PID_SPEED_INTEGRAL_INIT_DIV */
 
 #define SPD_DIFFERENTIAL_TERM_ENABLING      DISABLE
-#define IQMAX_A                             20
+#define IQMAX_A                             25
 
 /* Default settings */
 #define DEFAULT_CONTROL_MODE                MCM_SPEED_MODE
@@ -125,7 +125,7 @@
 #define DEFAULT_FLUX_COMPONENT_A            0
 
 /**************************    FIRMWARE PROTECTIONS SECTION   *****************/
-#define OV_VOLTAGE_THRESHOLD_V              25 /*!< Over-voltage threshold */
+#define OV_VOLTAGE_THRESHOLD_V              24 /*!< Over-voltage threshold */
 #define UD_VOLTAGE_THRESHOLD_V              8 /*!< Under-voltage threshold */
 #ifdef NOT_IMPLEMENTED
 #define ON_OVER_VOLTAGE                     TURN_OFF_PWM /*!< TURN_OFF_PWM, TURN_ON_R_BRAKE or TURN_ON_LOW_SIDES */
@@ -150,22 +150,22 @@
 /* Phase 2 */
 #define PHASE2_DURATION                     10714 /*milliseconds */
 #define PHASE2_FINAL_SPEED_UNIT             (5357*SPEED_UNIT/U_RPM)
-#define PHASE2_FINAL_CURRENT_A              10
+#define PHASE2_FINAL_CURRENT_A              8
 
 /* Phase 3 */
 #define PHASE3_DURATION                     0 /*milliseconds */
 #define PHASE3_FINAL_SPEED_UNIT             (5357*SPEED_UNIT/U_RPM)
-#define PHASE3_FINAL_CURRENT_A              20
+#define PHASE3_FINAL_CURRENT_A              25
 
 /* Phase 4 */
 #define PHASE4_DURATION                     0 /*milliseconds */
 #define PHASE4_FINAL_SPEED_UNIT             (5357*SPEED_UNIT/U_RPM)
-#define PHASE4_FINAL_CURRENT_A              20
+#define PHASE4_FINAL_CURRENT_A              25
 
 /* Phase 5 */
 #define PHASE5_DURATION                     0 /* milliseconds */
 #define PHASE5_FINAL_SPEED_UNIT             (5357*SPEED_UNIT/U_RPM)
-#define PHASE5_FINAL_CURRENT_A              20
+#define PHASE5_FINAL_CURRENT_A              25
 
 #define ENABLE_SL_ALGO_FROM_PHASE           2
 
@@ -194,7 +194,7 @@
 
 /******************************   ADDITIONAL FEATURES   **********************/
 
-#define FW_VOLTAGE_REF                      980 /*!<Vs reference, tenth of a percent */
+#define FW_VOLTAGE_REF                      985 /*!<Vs reference, tenth of a percent */
 #define FW_KP_GAIN                          3000 /*!< Default Kp gain */
 #define FW_KI_GAIN                          5000 /*!< Default Ki gain */
 #define FW_KPDIV                            32768 /*!< Kp gain divisor.If FULL_MISRA_C_COMPLIANCY is not defined the divisor is implemented through algebrical

@@ -1091,7 +1091,7 @@
               {
                 "duration": "Number.NaN",
                 "speedTarget": "Number.NaN",
-                "currVoltTarget": 10
+                "currVoltTarget": 8
               },
               {
                 "duration": "Number.NaN",
@@ -1140,8 +1140,8 @@
         "rs": 0.13,
         "ls": 0.012,
         "mmsLd_lq_ratio": "Number.NaN",
-        "maxCurrent": 20,
-        "maxDCVoltage": 21,
+        "maxCurrent": 25,
+        "maxDCVoltage": 20,
         "BEmfConstant": 0.45,
         "inertia": "Number.NaN",
         "friction": "Number.NaN",
@@ -1161,7 +1161,7 @@
       },
       "powerSupply_0": {
         "nominalDcBusVoltage": "Number.NaN",
-        "nominalCurrent": 20,
+        "nominalCurrent": 25,
         "maxCurrent_pk": "Number.NaN",
         "icl": {
           "enable": false,
@@ -1183,12 +1183,12 @@
       "driveManagement_0": {
         "currentReg": {
           "controlMode": "speed",
-          "autoPI": false,
+          "autoPI": true,
           "KpKi": {
             "P": "Number.NaN",
             "I": "Number.NaN"
           },
-          "cutOffFrequency": 3200,
+          "cutOffFrequency": "Number.NaN",
           "useMTPA": false,
           "feedForward": false,
           "MTPATarget": "Number.NaN"
@@ -1199,8 +1199,8 @@
           "commutationTime": "Number.NaN",
           "KpKi": {
             "P": {
-              "num": 3400,
-              "den": 1024
+              "num": 6000,
+              "den": 512
             },
             "I": {
               "num": 2000,
@@ -1213,12 +1213,12 @@
           "target": "Number.NaN",
           "KpKi": {
             "P": {
-              "num": 7500,
-              "den": 16384
+              "num": "Number.NaN",
+              "den": "Number.NaN"
             },
             "I": {
-              "num": 1500,
-              "den": 16384
+              "num": "Number.NaN",
+              "den": "Number.NaN"
             }
           }
         },
@@ -1226,18 +1226,18 @@
           "target": "Number.NaN",
           "KpKi": {
             "P": {
-              "num": 7500,
-              "den": 16384
+              "num": "Number.NaN",
+              "den": "Number.NaN"
             },
             "I": {
-              "num": 1500,
-              "den": 16384
+              "num": "Number.NaN",
+              "den": "Number.NaN"
             }
           }
         },
         "fluxWeak": {
           "enabled": true,
-          "voltageLimit": 98,
+          "voltageLimit": "Number.NaN",
           "KpKi": {
             "P": {
               "num": 3000,
@@ -1303,16 +1303,7 @@
           }
         },
         "ocpData": {
-          "enable": true,
-          "ocpMode": "",
-          "ocp": {
-            "mode": "internal",
-            "digitalFilter": 15,
-            "threshold": "Number.NaN",
-            "bkinMode": "",
-            "invertingInput": "DAC",
-            "voltageRef": "Number.NaN"
-          }
+          "enable": false
         }
       }
     }
